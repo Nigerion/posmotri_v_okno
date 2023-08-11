@@ -13,11 +13,9 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
- 
-
 }
 
 h1,
@@ -39,22 +37,23 @@ ol {
   list-style: none;
 }
 
-.content{
+.content {
   display: flex;
   padding: 133px 30px;
-  border: 2px solid red ;
+  /* border: 2px solid red; */
   gap: 30px;
   box-sizing: border-box;
 }
 
-.content__list{
+.content__list {
   overflow-y: scroll;
-  overflow-x:hidden ;
+  overflow-x: hidden;
   height: 300px;
   width: 400px;
+  position: relative;
 }
-.title{
-  color: #FFF;
+.title {
+  color: #fff;
   font-family: Oswald;
   font-size: 75px;
   font-style: normal;
@@ -62,70 +61,77 @@ ol {
   line-height: 94%;
   text-transform: uppercase;
 }
-.result{
+.result {
   display: flex;
-  flex-direction: column; 
-  justify-content: end; 
+  flex-direction: column;
+  justify-content: end;
 }
-.search-form{
+.search-form {
   display: flex;
   justify-content: space-between;
 }
 /*  */
-.result__video{
+.result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   box-sizing: border-box;
 }
-.content__details{
+.content__details {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 18px;
 }
-.result__video-container{
+
+.result__video-container {
   display: flex;
   margin-bottom: 16px;
   width: 711px;
   height: 386px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  position: relative;
 }
+/*  */
 
-.content__video-card-thumbnail{
+.content__video-card-thumbnail {
   width: 100%;
   height: auto;
 }
 
-.content__video-card{
-  display: flex; 
-   justify-content: space-between;
-  
+.content__video-card {
+  /* display: flex; 
+   justify-content: space-between; */
+  display: flex;
 }
 
-.content__video-card-thumbnail{
-  width: 194px;
+.content__video-card-thumbnail {
+  /* width: 49%; */
+  /* width: 204px; */
   height: 103px;
 }
 
-.content__video-card-description-container{
+.content__video-card-description-container {
   width: 100%;
 }
-.content__list-item  {
-  display: block;
-  margin-bottom: 30px;
-}
 
-.button{
-  color: #FFF;
+.content__list-item {
+  display: block;
+  margin-bottom: 35px;
+  /* position: relative; */
+}
+/*  */
+
+.button {
+  color: #fff;
   text-align: center;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background-color: #1B1919;; 
+  background-color: #1b1919;
   background: none;
   border: 1px solid white;
   cursor: pointer;
@@ -135,18 +141,19 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
-.button:active{
+.button:active {
   background: #545050;
   text-decoration: none;
 }
-.button:hover{
+
+.button:hover {
   text-decoration: underline;
 }
 
-.more-button{
+.more-button {
   width: 100%;
   display: flex;
   width: 399px;
@@ -154,37 +161,33 @@ ol {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
 }
-.content__accent{
+.content__accent {
   color: #545050;
   font-family: Oswald;
   font-size: 75px;
-  font-style: normal;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
 
-
-.content__video-card-title{
-  color: #FFF;
+.content__video-card-title {
+  color: #fff;
   font-family: Oswald;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
-  
 }
-.content__video-card-description{
-  color: #FFF;
+.content__video-card-description {
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16.2px; 
+  line-height: 16.2px;
 }
-.content__card-link{
+.content__card-link {
   text-decoration: none;
 }
 
@@ -196,33 +199,44 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} 
+}
 
-
-
-.content__video-card:active{
+.content__video-card:active {
   background: #545050;
 }
-.content__video-card:hover{
+/* .content__list:visited{
+  background: #545050;
+} */
+/* .content__card-link:active{
+  background: #545050;
+} */
+/* li.content__list-item a { background-color: #FF0000; } */
+/* .cards-list-item-template a{background-color: #FF0000} */
+
+
+.content__video-card:hover {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: white;
   text-underline-offset: 5px;
 }
 
-.search-form__fieldset{
- border: none;
+.search-form__fieldset {
+  border: none;
+ 
 }
-.search-form__label{
+.search-form__label {
   display: flex;
   width: fit-content;
+  margin-top: 5px;
+  
 }
-.search-form__checkbox-list{
+.search-form__checkbox-list {
   display: flex;
   gap: 15px;
 }
-/*  */
-.search-form__pseudo-checkbox{
+
+.search-form__pseudo-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,39 +244,52 @@ ol {
   block-size: 19px;
   border: 1px solid white;
   margin-right: 5px;
-  
+  cursor: pointer;;
 }
 
-input[type='checkbox']:checked + span {
-  background-color: #ffffff;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  min-inline-size: 15px;
+  min-block-size: 15px;
+  background-color: #fff;
 }
-.search-form__label-text{
-  color: #FFF;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+}
+.search-form__label-text {
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
 }
-.search-form__label-text:hover{
+.search-form__label-text:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 ::-webkit-scrollbar {
   width: 0;
 }
-.search-form__fieldset-title{
-  color: #FFF;
+.search-form__fieldset-title {
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
-
+  
 }
-input {
-  color: rgba(255, 255, 255, 0.70);
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
   font-size: 18px;
   background-color: transparent;
-  border :none;
+  border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   width: 225px;
+  
+}
+
+
+
+.error-template {
+  position: absolute;
 }
