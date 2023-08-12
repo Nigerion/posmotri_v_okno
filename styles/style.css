@@ -40,37 +40,39 @@ ol {
 .content {
   display: flex;
   padding: 133px 30px;
-  /* border: 2px solid red; */
   gap: 30px;
   box-sizing: border-box;
 }
 
 .content__list {
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   height: 300px;
   width: 400px;
   position: relative;
 }
+
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
+
 .result {
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
+
 .search-form {
   display: flex;
   justify-content: space-between;
 }
-/*  */
+
 .result__video {
   width: 100%;
   height: 100%;
@@ -90,26 +92,18 @@ ol {
   margin-bottom: 16px;
   width: 711px;
   height: 386px;
-  /* border: 2px solid red; */
   position: relative;
 }
-/*  */
 
 .content__video-card-thumbnail {
   width: 100%;
-  height: auto;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card {
-  /* display: flex; 
-   justify-content: space-between; */
   display: flex;
-}
-
-.content__video-card-thumbnail {
-  /* width: 49%; */
-  /* width: 204px; */
-  height: 103px;
 }
 
 .content__video-card-description-container {
@@ -119,15 +113,13 @@ ol {
 .content__list-item {
   display: block;
   margin-bottom: 35px;
-  /* position: relative; */
 }
-/*  */
 
 .button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -142,6 +134,11 @@ ol {
   justify-content: center;
   align-items: center;
   margin-top: 17px;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .button:active {
@@ -162,6 +159,7 @@ ol {
   align-items: center;
   gap: 10px;
 }
+
 .content__accent {
   color: #545050;
   font-family: Oswald;
@@ -179,6 +177,7 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .content__video-card-description {
   color: #fff;
   font-family: Fira Sans Condensed;
@@ -187,8 +186,10 @@ ol {
   font-weight: 400;
   line-height: 16.2px;
 }
+
 .content__card-link {
   text-decoration: none;
+  display: block;
 }
 
 .visually-hidden {
@@ -201,18 +202,13 @@ ol {
   white-space: nowrap;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background: #545050;
 }
-/* .content__list:visited{
-  background: #545050;
-} */
-/* .content__card-link:active{
-  background: #545050;
-} */
-/* li.content__list-item a { background-color: #FF0000; } */
-/* .cards-list-item-template a{background-color: #FF0000} */
 
+.content__card-link_current {
+  background-color: #545050;
+}
 
 .content__video-card:hover {
   cursor: pointer;
@@ -223,14 +219,14 @@ ol {
 
 .search-form__fieldset {
   border: none;
- 
 }
+
 .search-form__label {
   display: flex;
   width: fit-content;
   margin-top: 5px;
-  
 }
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -244,51 +240,59 @@ ol {
   block-size: 19px;
   border: 1px solid white;
   margin-right: 5px;
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  content: '';
+  content: "";
   min-inline-size: 15px;
   min-block-size: 15px;
   background-color: #fff;
 }
+
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
 }
+
 .search-form__label-text {
   color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
 }
+
 .search-form__label-text:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 ::-webkit-scrollbar {
   width: 0;
 }
+
 .search-form__fieldset-title {
   color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
-  
 }
+
 .search-form__textfield {
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   background-color: transparent;
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   width: 225px;
-  
+  appearance: none;
 }
 
-
+.search-form__label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .error-template {
   position: absolute;
