@@ -47,8 +47,7 @@ ol {
 .content__list {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 300px;
-  width: 400px;
+  block-size: 298px;
   position: relative;
 }
 
@@ -217,10 +216,6 @@ ol {
   text-underline-offset: 5px;
 }
 
-.search-form__fieldset {
-  border: none;
-}
-
 .search-form__label {
   display: flex;
   width: fit-content;
@@ -289,9 +284,12 @@ ol {
   appearance: none;
 }
 
-.search-form__label:hover {
+.search-form__fieldset {
+  border: none;
+  
+}
+.search-form__pseudo-checkbox:hover + .search-form__label-text{
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .error-template {
